@@ -51,9 +51,9 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  comments: 'comments',
-  posts: 'posts',
-  users: 'users'
+  User: 'User',
+  Post: 'Post',
+  Comment: 'Comment'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -72,34 +72,34 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-export const CommentsScalarFieldEnum = {
-  id: 'id',
-  text: 'text',
-  post_id: 'post_id',
-  author_id: 'author_id',
-  created_at: 'created_at'
-} as const
-
-export type CommentsScalarFieldEnum = (typeof CommentsScalarFieldEnum)[keyof typeof CommentsScalarFieldEnum]
-
-
-export const PostsScalarFieldEnum = {
-  id: 'id',
-  title: 'title',
-  author_id: 'author_id',
-  created_at: 'created_at'
-} as const
-
-export type PostsScalarFieldEnum = (typeof PostsScalarFieldEnum)[keyof typeof PostsScalarFieldEnum]
-
-
-export const UsersScalarFieldEnum = {
+export const UserScalarFieldEnum = {
   id: 'id',
   name: 'name',
   email: 'email'
 } as const
 
-export type UsersScalarFieldEnum = (typeof UsersScalarFieldEnum)[keyof typeof UsersScalarFieldEnum]
+export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+
+
+export const PostScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  authorId: 'authorId',
+  createdAt: 'createdAt'
+} as const
+
+export type PostScalarFieldEnum = (typeof PostScalarFieldEnum)[keyof typeof PostScalarFieldEnum]
+
+
+export const CommentScalarFieldEnum = {
+  id: 'id',
+  text: 'text',
+  postId: 'postId',
+  authorId: 'authorId',
+  createdAt: 'createdAt'
+} as const
+
+export type CommentScalarFieldEnum = (typeof CommentScalarFieldEnum)[keyof typeof CommentScalarFieldEnum]
 
 
 export const SortOrder = {

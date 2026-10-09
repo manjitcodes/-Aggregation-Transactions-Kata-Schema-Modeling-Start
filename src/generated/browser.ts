@@ -18,17 +18,17 @@ export { Prisma }
 export * as $Enums from './enums.ts'
 export * from './enums.ts';
 /**
- * Model comments
+ * Model User
  * 
  */
-export type comments = Prisma.commentsModel
+export type User = Prisma.UserModel
 /**
- * Model posts
+ * Model Post
  * 
  */
-export type posts = Prisma.postsModel
+export type Post = Prisma.PostModel
 /**
- * Model users
+ * Model Comment
  * 
  */
-export type users = Prisma.usersModel
+export type Comment = Prisma.CommentModel
